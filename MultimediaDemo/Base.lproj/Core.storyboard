@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Core View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CoreViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8k-md-qnA">
+                                <rect key="frame" x="0.0" y="696" width="375" height="116"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qFE-3F-Xaa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uU-DM-G7D">
+                                            <rect key="frame" x="68.666666666666671" y="16" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="4Di-4j-Jnq"/>
+                                                <constraint firstAttribute="height" constant="50" id="fb9-Ih-M7D"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="CameraSwitch"/>
+                                            <connections>
+                                                <action selector="cameraSwitchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3b-np-dNe"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kw-Ve-5zY">
+                                            <rect key="frame" x="162.66666666666666" y="16" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="2IJ-Lc-dEd"/>
+                                                <constraint firstAttribute="width" constant="50" id="d4y-bx-qsU"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="MicrophoneSwitch"/>
+                                            <connections>
+                                                <action selector="microphoneSwitchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjJ-62-mZ6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-U7-zAz">
+                                            <rect key="frame" x="256.33333333333331" y="16" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="MbV-kR-eD9"/>
+                                                <constraint firstAttribute="height" constant="50" id="NEH-E2-ixC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <state key="normal" title="?">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="hintAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ojp-io-vMC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fGE-U7-zAz" firstAttribute="centerX" secondItem="BsS-xG-hmG" secondAttribute="centerX" multiplier="1.5" id="9jw-ei-EUJ"/>
+                                        <constraint firstItem="BsS-xG-hmG" firstAttribute="bottom" secondItem="fGE-U7-zAz" secondAttribute="bottom" constant="16" id="Inr-MQ-7IP"/>
+                                        <constraint firstItem="7uU-DM-G7D" firstAttribute="bottom" secondItem="BsS-xG-hmG" secondAttribute="bottom" constant="-16" id="TWB-kC-DcF"/>
+                                        <constraint firstItem="7uU-DM-G7D" firstAttribute="centerX" secondItem="BsS-xG-hmG" secondAttribute="centerX" multiplier="0.5" id="WrL-fo-6at"/>
+                                        <constraint firstItem="fGE-U7-zAz" firstAttribute="top" secondItem="BsS-xG-hmG" secondAttribute="top" constant="16" id="aDo-LA-ZTb"/>
+                                        <constraint firstItem="7kw-Ve-5zY" firstAttribute="centerX" secondItem="BsS-xG-hmG" secondAttribute="centerX" id="dof-Om-vmt"/>
+                                        <constraint firstItem="7uU-DM-G7D" firstAttribute="top" secondItem="BsS-xG-hmG" secondAttribute="top" constant="16" id="eDK-Zn-B4v"/>
+                                        <constraint firstItem="7kw-Ve-5zY" firstAttribute="top" secondItem="BsS-xG-hmG" secondAttribute="top" constant="16" id="lVb-mk-y7g"/>
+                                        <constraint firstItem="7kw-Ve-5zY" firstAttribute="bottom" secondItem="BsS-xG-hmG" secondAttribute="bottom" constant="-16" id="rjL-iT-z9c"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="BsS-xG-hmG"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="a8k-md-qnA" secondAttribute="bottom" id="RjS-CB-M5T"/>
+                            <constraint firstItem="a8k-md-qnA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e6k-M8-PTr"/>
+                            <constraint firstItem="a8k-md-qnA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hqF-CX-9zJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraSwitchButton" destination="7uU-DM-G7D" id="iKR-BR-JBQ"/>
+                        <outlet property="coreView" destination="8bC-Xf-vdC" id="9CG-JO-1fm"/>
+                        <outlet property="hintButton" destination="fGE-U7-zAz" id="CFi-a0-qyq"/>
+                        <outlet property="microphoneSwitchButton" destination="7kw-Ve-5zY" id="zUS-op-Nxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.96551724137932"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CameraSwitch" width="28" height="28"/>
+        <image name="MicrophoneSwitch" width="17" height="26"/>
+    </resources>
+</document>
